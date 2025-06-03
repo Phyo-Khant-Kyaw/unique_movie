@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Movie Review </title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="custom.js"></script>
+
+	<style type="text/css">
+
+		.content1, .content2 {
+			padding: 0px;
+			margin:0px;
+			background-color: #f6f5f3;
+		}
+		.content1 img {
+			width: 700px;
+			height: 300px;
+			float:left;
+			margin:30px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.content1 label {
+			font-size: 40px;
+			padding-top: 45px;
+		}
+		.content1 label:hover{
+			color:#283b5e;
+		}
+		.content1 i {
+			font-size: 30px;
+			color:#e8c15f;
+		}
+		.content1 p {
+			font-size: 20px;
+		}
+
+		.content2 img {
+			max-width: 250px;
+			height: 200px;
+			margin-top:15px;
+			margin-bottom: 15px;
+			border-radius: 5px;
+			cursor: pointer;
+			border:3px solid #fff;
+		}
+
+		.content2 img:hover {
+			opacity: 0.8;
+		}
+
+		.content2 i {
+			display: none;
+			
+		}
+
+		.content2{
+			position: relative;
+		}
+
+		.content2 .video:hover i{
+			font-size: 50px;
+			color:#daa520;
+			position: absolute;
+			bottom:55%;
+			left:40%;
+			display: inline-block;
+			clear: both;
+			/*cursor: pointer;*/
+		}
+
+		.topic_para h1{
+			font-family: Geneva;
+			font-size: 30px;
+			color:black;
+			text-align: center;
+		}
+
+		.topic_para h1:hover {
+			text-decoration: underline;
+		}
+
+		.content2 label {
+			font-size:18px;
+		}
+
+		.content2 span {
+			color:gray;
+		}
+
+		.comment img {
+			width: 250px;
+			height: 300px;
+			float:left;
+			border-radius: 5px;
+			border:3px solid #989898;
+			margin:30px;
+		}
+
+		.comment label.mov_name{
+			font-family: Geneva;
+			font-size: 25px;
+			color:black;
+		}
+
+
+		 .comment span.user_name, .comment span.rel_date {
+		 	font-family: Geneva;
+		 	font-size: 20px;
+		 	color: black;
+		 }
+
+		 .comment p, .comment span.love_react, .comment span.react_count{
+		 	font-family: Geneva;
+		 	font-size: 18px;
+		 	color:black;
+		 }
+
+		 .com_ses {
+		 	background-color: #f6f5f3;
+		 	margin-top: 45px;
+		 	padding:50px 0px;
+		 }
+
+
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('.content1').on('mouseover', '.con1_img', function(){
+				$('.con1_img').prop('style','opacity: 0.8');
+			})
+
+			$('.content1').on('mouseout', '.con1_img', function(){
+				$('.con1_img').prop('style','opacity: 1');
+			})
+
+			// $('.content2').on('mouseover', '#con2_img1', function(){
+			// 	$('#con2_img1').prop('style','opacity: 0.6');
+			// 	$('.content2 i').prop('style', 'display:inline');
+			// })
+			// $('.content2').on('mouseout', '#con2_img1', function(){
+			// 	$('#con2_img1').prop('style','opacity: 1');
+			// 	$('.content2 i').prop('style', 'display:none');
+			// })
+
+		})
+	</script>
+
+</head>
+<body>
+
+ 	<!-- Navigarion -->
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-transparent py-3" >
+		 	 <a class="navbar-brand" href="index.html" style="color: #ee7600;">UNIQUE MOVIE</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav ml-auto">
+		      <a class="nav-item nav-link active px-4" href="index.html">Home <span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link px-4" href="aboutus.html">About</a>
+		      <a class="nav-item nav-link px-4" href="movie.html">Movie</a>
+		      <a class="nav-item nav-link px-4" href="series.html">Series</a>
+		      <a class="nav-item nav-link px-4" href="gallery.html">Gallery</a>
+		      <a class="nav-item nav-link px-4" href="contactUs.html">Contact Us</a>
+		    </div>
+		  </div>
+		</nav>
+	</div>
+
+	<!-- Banner -->
+
+	<div id="banner">
+		<div class="container-fluid">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="photo/banner2.jpg" alt="First slide"> 
+
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="photo/banner4.jpg" alt="Second slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="photo/banner6.jpeg" alt="Second slide">
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			    <div class="carousel-caption d-none d-md-block"style="margin-bottom:100px;">
+			    	<div id="quote" >
+			    		<h5> UNIQUE MOVIE</h5>
+				    	<p> Love means never having to say you're sorry</p>
+			    	</div>
+			    		
+			 	 </div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Content -->
+ 	<div class="content">
+
+ 	<div class="container">
+		<div class="row my-5" style="height: auto;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 topic_para pt-3">
+					<h1> From The Blog </h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row content1 my-5">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+				<img src="photo/con_1.jpg" class="con1_img">
+				<div class="para px-5">
+					<label> Radioactive </label> <br>
+					<i class="fas fa-star"></i>&nbsp;<i class="fas fa-star"></i> &nbsp;<i class="fas fa-star"></i> <br> <br>
+					<p>
+						The execution is frustratingly inconsistent, with a time-hopping structure that’s more jarring than thrilling. 
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row mb-5" style="height: auto;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 topic_para pt-3">
+					<h1> Now Playing </h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row content2 mb-5 pb-3">
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 video">
+				<img src="photo/slipho1.jpg" id="con2_img1"> 
+				<label>Video Interview: Andy Samberg on Palm Springs  </label>
+			    <span>July 23, 2020</span>
+			    <br> <i class="far fa-play-circle play"></i>
+			    
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 video">
+				<img src="photo/slipho2.jpg" id="con2_img2">
+				<label>Cathartic Catholic Cinema: Karen Maine on Yes, God</label>
+			    <span>July 22, 2020</span>
+			     <br> <i class="far fa-play-circle play"></i>
+
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 video">
+				<img src="photo/slipho3.jpg" id="con2_img3">
+				<label>The World We're Living In: Dave Franco on The Rental </label>
+			    <span>July 21, 2020</span>
+			    <br> <i class="far fa-play-circle play"></i>
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 video">
+				<img src="photo/slipho4.jpg" id="con2_img4">
+				<label>A Truthful Movie: Václav Marhoul on The Painted Bird  </label>
+			    <span>July 23, 2020</span>
+			    <br> <i class="far fa-play-circle play"></i>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="container">
+		<div class="row" style="height: auto;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 topic_para pt-3">
+					<h1> Popular Review This Week </h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12 comment">
+				<img src="photo/com_1.jpg">
+				<div class="com_ses">
+					<label class="mov_name"> Palm Springs </label> <span class="rel_date"> 2020 </span> <br>
+					<span class="user_name"><i class="far fa-user"></i> Sean Baker </span> <br> <br>
+					<p> &quot; Truely enjoyed this filmn. &quot;</p> 
+					<span class="love_react"><i class="fas fa-heart"></i></span> <span class="react_count"> 802 likes </span>
+				</div>
+				<br>
+
+			</div>
+
+
+			<div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12 comment">
+				<img src="photo/com_2.jpg">
+				<div class="com_ses">
+					<label class="mov_name"> Daredevil  </label> <span class="rel_date"> 2003 </span> <br>
+					<span class="user_name"><i class="far fa-user"></i> Patrick Willems  </span> <br> <br>
+					<p> &quot; A scene ends on Colin Farrell growling "I want a costume! &quot;  </p> 
+					<span class="love_react"><i class="fas fa-heart"></i></span> <span class="react_count"> 503 likes </span>
+				</div>
+				<br>
+			</div>
+
+			<div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12 comment">
+				<img src="photo/com_3.jpg">
+				<div class="com_ses">
+					<label class="mov_name"> The Social Network  </label> <span class="rel_date"> 2010 </span> <br>
+					<span class="user_name"><i class="far fa-user"></i> Frandi Peralta </span> <br> <br>
+					<p> &quot; Ted Mosby: Kids, I'm going to tell you an incredible story. &quot; </p> 
+					<span class="love_react"><i class="fas fa-heart"></i></span> <span class="react_count"> 1,785 likes </span>
+				</div>
+				<br>
+			</div>
+	</div>
+
+
+
+ 	</div>
+		
+
+	<!--Footer -->
+	<div class="footer">
+		<div class="container-fluid">
+		<div class="row pt-5 ml-auto">
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 px-5 foot1">
+				<h3>About Us</h3>
+				<p> Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 px-5 foot2">
+				<h3> Review Links </h3> <br>
+				<a href="movie.html"> MOVIES </a> <br>
+				<a href="series.html"> SERIES </a> <br>
+				<a href="gallery.html"> GALLERY </a>
+			</div>
+
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 px-5 foot3">
+				<h3> Helpful Links </h3> <br>
+				<a href="#"> SERVICE </a> <br>
+				<a href="#"> SUPPORT</a> <br>
+				<a href="#"> TERMS & CONDITIONS </a>
+			</div>
+
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 px-5 foot4">
+				<h3> Subcribe More Info </h3> <br> 
+			<form class="form-inline">
+			  <div class="form-group mx-sm-3 mb-2">
+			    <input type="text" class="form-control" id="inputPassword2" placeholder="Enter Your E-mail">
+			  </div>
+			  <div class="form-group mx-sm-3 my-3">
+			  	<button type="submit" class="btn btn-warning mb-2 text-black"> Subscribe</button>
+			  </div>
+			</form>
+			</div>
+
+		</div>
+		<div class="row pb-3" align="center"> 
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<hr>
+				<i class="fab fa-facebook"></i> 
+				<i class="fab fa-google-plus-g"></i>
+				<i class="fab fa-twitter"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fab fa-youtube"></i>
+			</div>
+		</div>	
+	</div>
+
+	</div>
+
+</body>
+</html>

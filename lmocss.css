@@ -1,0 +1,67 @@
+h4,h5{
+	font-family: ;
+}
+#d{
+	color: blue;
+	font-family: ;
+}
+
+div.speaker{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 80%;
+}
+
+div.detail{
+	background:rgba(6,12,34,0.76);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	padding-top: 10px;
+	width: 100%;
+	cursor: pointer;
+}
+
+div.detail:hover{
+	background-color: silver;
+	color:black;
+}
+
+.nav{
+		float: middle;
+}
+
+a#download{
+	border-radius: 50px;
+	padding: 5px 5px;
+	
+	text-decoration: ;
+	transition: 0.5s;
+	animation-delay: 0.8s;
+	-webkit-animation-delay:0.8s;
+	cursor: pointer;
+	font-family: italic;
+}
+
+a#download:hover{
+	background-color: blue;
+	color: white;
+}
+
+div.poster{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 80%;
+	cursor: pointer;
+}
+.ch{
+	width: 50px;
+	height: 60px;
+}
+#line{
+	width: 100%;
+	border: 2px solid red;
+}

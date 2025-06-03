@@ -1,0 +1,98 @@
+a.nav-link {
+	font-family: verdana;
+	font-size: 20px;
+	color: #ee7600;
+	
+	/*padding:0px 14px;*/
+}
+
+a.nav-link:hover{
+	/*border-bottom: 3px solid #424949;*/
+	border-top: 3px solid #ee7600;
+	/*border-right: 3px solid #424949;*/
+/*	transition: 0.8s;
+	animation-delay: 0.2s;
+	font-weight: bold;*/
+
+	/*background-color: blakc;*/
+}
+
+a.navbar-brand {
+	font-family: sans-serif;
+	font-size:35px;
+	color:gold;
+}
+
+#banner img {
+	width: 100%;
+	height: 100vh;
+	margin:0px auto;
+}
+
+#quote {
+	background-color:rgba(255, 255, 255, 0.6);
+	padding:30px;
+	width: 500px;
+	margin:0px auto;
+}
+
+#quote h5 {
+	font-family: Geneva;
+	font-size: 36px;
+	color:white;
+}
+
+#quote p {
+	font-family: Geneva;
+	font-size: 20px;
+	color:black;
+}
+.footer {
+	background-color: black;
+}
+.footer h3 {
+	font-family: Geneva;
+	font-size: 20px;
+	color:#daa520;
+}
+
+.footer label {
+	font-family: Geneva;
+	font-size:23px;
+	color:#daa520;
+}
+
+.footer a{
+	font-family: sans-serif;
+	font-size: 15px;
+	color:white;
+	padding:10px 0px;
+	line-height: 35px;
+}
+.footer a:hover {
+	color:white;
+	text-decoration: none;
+	color: silver;
+}
+.footer span, .footer p {
+	font-family: sans-serif;
+	font-size: 15px;
+	color:white;
+	padding:25px 0px;
+	line-height: 50px;
+}
+.footer p {
+	line-height: 30px;
+}
+.footer hr {
+	width: 94%;
+	border:1px solid white;
+	border-style: inset;
+}
+
+.footer i {
+	font-size: 2em; 
+	color:#daa520;
+	padding-right:10px;
+}
+
